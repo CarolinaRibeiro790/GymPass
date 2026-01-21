@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir build",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "repository": {
     "type": "git",
@@ -23,9 +27,13 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.6",
     "@types/node": "25.0.9",
+    "@vitest/coverage-v8": "4.0.17",
+    "@vitest/ui": "4.0.17",
     "tsup": "8.5.1",
     "tsx": "4.21.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite-tsconfig-paths": "6.0.4",
+    "vitest": "4.0.17"
   },
   "dependencies": {
     "@prisma/client": "5.22.0",
